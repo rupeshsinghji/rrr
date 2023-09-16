@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .vid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        
+        }
+
+        .vid video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+           
+            
+        }
+
+        @font-face {
+            font-family: 'Mokoto Glitch';
+            src: url("font\\Mokoto Glitch.ttf") format('ttf')
+                /* You should replace 'path/to/' with the actual path to your font files */
+
+        }
+
+        #logo {
+            font-family: 'Mokoto Glitch', sans-serif;
+            font-size: 800%;
+            /* Adjust font size as needed */
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            /* Ensure text appears above the video */
+            color: rgb(19, 5, 54);
+            /* Adjust font color as needed   rgb(19, 5, 54)*/
+
+            text-shadow:
+                -2px -2px 0 #f8e801,
+                2px -2px 0 #f801cf,
+                -2px 2px 0 #f801cf,
+                2px 2px 0 #f801cf;
+
+
+
+
+        }
+
+        #logo:hover {
+            cursor: pointer;
+            text-shadow:
+                -2px -2px 0 #f80101,
+                2px -2px 0 #01f8a6,
+                -2px 2px 0 #01f8a6,
+                2px 2px 0 #01f8a6;
+
+            /* background: var(--color); */
+            /* color: var(--color); */
+
+
+
+
+
+        }
+
+        .border-light {
+            border-radius: 25%;
+            border-color: rgb(246, 243, 244);
+            border-width: 3px;
+            border-style: solid;
+            --color: #f801cf;
+            box-shadow: 0 0 25px var(--color);
+        }
+
+        .item-main {
+            display: flex;
+            width: fit-content;
+            z-index: 1;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .item {
+            height: auto;
+            width: auto;
+            color: rgb(19, 5, 54);
+            align-items: center;
+            margin: 10px;
+            /* background-color:  rgb(19, 5, 54); */
+            border-radius: 20%;
+            font-size: 25px;
+            font-style: bold;
+            font-family: 'Mokoto Glitch', sans-serif;
+            text-align: center;
+            text-shadow:
+                -1px -1px 0 #f8e801,
+                1px -1px 0 #f801cf,
+                -1px 1px 0 #f801cf,
+                1px 1px 0 #f801cf;
+        }
+
+        .hover_item:hover {
+            color: rgb(109, 5, 54);
+            font-size: 30px;
+            cursor: pointer;
+
+        }
+
+        .null-link {
+            
+            text-decoration: none !important;
+            color: rgb(19, 5, 54);
+        }
+
+        .null-link:hover{
+            color: rgb(109, 5, 54);
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .null-link:visited {
+            text-decoration: none ;
+        }
+
+        .item-main2 {
+            display: flex;
+            width: fit-content;
+            z-index: 1;
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .border-light2 {
+            border-radius: 25%;
+            border-color: rgb(246, 243, 244);
+            border-width: 3px;
+            border-style: solid;
+            --color: #01e8f8;
+            box-shadow: 0 0 25px var(--color);
+        }
+        .item2 {
+            height: auto;
+            width: auto;
+            color: rgb(31, 173, 147);
+            align-items: center;
+            margin: 10px;
+            /* background-color:  rgb(19, 5, 54); */
+            border-radius: 20%;
+            font-size: 20px;
+            font-style: bold;
+            font-family: 'Mokoto Glitch', sans-serif;
+            text-align: center;
+            text-shadow:
+                -2px -2px 0 #f8b20198;
+               
+           
+        }
+        .null-link2 {
+            
+            text-decoration: none !important;
+            color:rgb(31, 173, 147);
+        }
+        .null-link2:hover{
+            color: rgb(109, 5, 54);
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="item-main border-light">
+        <span class="item"><a href="#"  class=" hover_item null-link" target="_blank">About</a></span>
+        <span class="item" ><a href="#" class=" hover_item null-link ">Help</a></span>
+    </div>
+
+    <div class="vid">
+        <video src="123.mp4" muted autoplay loop></video>
+    </div>
+
+    <h1 id="logo">
+        IGITION <BR> CHROME
+    </h1>
+   
+
+
+      <div class="item-main2 border-light2">
+        <span class="item2"><a href="#" class=" hover_item null-link2 ">login</a></span>
+        <span class="item2">|</span>
+        <span class="item2"><a href="#" class=" hover_item null-link2 ">sign up</a></span>
+        
+    </div>
+</body>
+
+</html>
